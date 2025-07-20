@@ -18,7 +18,7 @@ const Navigation: FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-54 py-6">
       <Link
         to="/"
-        className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
+        className="text-white text-2xl font-bold hover:text-gray-300 transition-colors w-40"
       >
         NL.
       </Link>
@@ -38,8 +38,7 @@ const Navigation: FC = () => {
         </Link>
       </div>
 
-      {/* Download CV Button */}
-      <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
+      <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-40">
         Download CV
       </button>
     </nav>
