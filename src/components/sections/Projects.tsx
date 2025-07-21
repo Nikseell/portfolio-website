@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
 const Projects: FC = () => {
-  return <section className="min-h-screen relative"></section>;
+  return <section className="text-white">Projects</section>;
 };
 
 export default Projects;

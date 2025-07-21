@@ -11,7 +11,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen px-54 relative">
       <Navigation />
       <main>{children}</main>
-      <Footer />
     </div>
   );
 };

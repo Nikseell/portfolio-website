@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
 const Contact: FC = () => {
-  return <section className="min-h-screen relative"></section>;
+  return <section className="text-white">Contact</section>;
 };
 
 export default Contact;
