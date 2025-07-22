@@ -4,14 +4,14 @@ import Beams from "../animations/Beam";
 const Hero: FC = () => {
   return (
     <section className="min-h-screen relative">
-      <div className="absolute inset-0 -z-10 w-screen left-1/2 transform -translate-x-1/2">
+      <div className="absolute inset-0 -mx-54 -z-10">
         <Beams
           beamWidth={2}
-          beamHeight={15}
+          beamHeight={20}
           beamNumber={12}
-          lightColor="#ffffff"
+          lightColor="darkgray"
           speed={2}
-          noiseIntensity={1.75}
+          noiseIntensity={2}
           scale={0.2}
           rotation={45}
         />
@@ -44,8 +44,8 @@ const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between pb-16 text-[#CBCBCB]">
-          <div className="flex space-x-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-16 text-[#CBCBCB]">
+          <div className="flex flex-wrap gap-8 lg:gap-16 xl:gap-32">
             <div className="text-white text-3xl" style={{ fontFamily: "Syne" }}>
               react
             </div>
