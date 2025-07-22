@@ -1,8 +1,19 @@
-import { type FC } from "react";
+import { type FC, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation: FC = () => {
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const getLinkClassName = (path: string) => {
     const baseClasses = "px-6 py-2 rounded-full font-medium transition-colors";
@@ -15,7 +26,13 @@ const Navigation: FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-54 py-6">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-54 py-6 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-md border-b border-white/10"
+          : "bg-transparent"
+      }`}
+    >
       <Link
         to="/"
         className="text-white text-2xl font-bold hover:text-gray-300 transition-colors w-40"
