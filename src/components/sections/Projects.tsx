@@ -26,6 +26,7 @@ const Projects: FC = () => {
             description={project.description}
             tags={project.tags}
             link={project.link}
+            codeLink={project.codeLink}
           />
         ))}
       </div>

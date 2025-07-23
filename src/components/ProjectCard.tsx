@@ -1,16 +1,12 @@
 import { type FC } from "react";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tags: string[];
-  imageUrl?: string;
-}
+import { type ProjectCardProps } from "../types/project";
 
 const ProjectCard: FC<ProjectCardProps> = ({
   title,
   description,
   tags,
+  link,
+  codeLink,
   imageUrl,
 }) => {
   return (
@@ -53,9 +49,24 @@ const ProjectCard: FC<ProjectCardProps> = ({
             </div>
           </div>
 
-          <button className="self-start px-4 py-2 lg:px-6 lg:py-3 bg-white hover:bg-white/90 text-gray-900 rounded-full text-sm lg:text-base font-medium transition-all duration-200 shadow-lg">
-            View Case Study
-          </button>
+          <div className="flex gap-4">
+            {link && (
+              <button
+                onClick={() => window.open(link, "_blank")}
+                className="px-4 py-2 lg:px-6 lg:py-3 bg-white hover:bg-white/90 text-gray-900 rounded-full text-sm lg:text-base font-medium transition-all duration-200 shadow-lg"
+              >
+                View project
+              </button>
+            )}
+            {codeLink && (
+              <button
+                onClick={() => window.open(codeLink, "_blank")}
+                className="px-4 py-2 lg:px-6 lg:py-3 bg-white hover:bg-white/90 text-gray-900 rounded-full text-sm lg:text-base font-medium transition-all duration-200 shadow-lg"
+              >
+                View code
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
