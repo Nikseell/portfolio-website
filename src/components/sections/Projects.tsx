@@ -1,33 +1,10 @@
 import { type FC } from "react";
 import Star from "../../assets/Star.svg";
 import ProjectCard from "../ProjectCard";
+import { projectsData } from "../../data/projects";
 
 const Projects: FC = () => {
-  const projectData = [
-    {
-      title: "Minimal Portfolio Template",
-      description:
-        "Ready-to-use minimal portfolio template - just add your content and deploy",
-      tags: ["TEMPLATE", "PORTFOLIO"],
-    },
-    {
-      title: "GitHub Traffic Frontend",
-      description:
-        "React + TypeScript dashboard for visualizing GitHub repository traffic data",
-      tags: ["REACT", "TYPESCRIPT"],
-    },
-    {
-      title: "GitHub Traffic Backend",
-      description:
-        "NestJS API for fetching and storing GitHub repository traffic data",
-      tags: ["NESTJS", "TYPESCRIPT"],
-    },
-    {
-      title: "Tic-Tac-Toe",
-      description: "2D Tic Tac Toe implementation using Unity Engine and C#",
-      tags: ["UNITY", "C#"],
-    },
-  ];
+  const displayedProjects = projectsData.slice(0, 4);
 
   return (
     <div className="text-white py-12">
@@ -42,12 +19,13 @@ const Projects: FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectData.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <ProjectCard
             key={index}
             title={project.title}
             description={project.description}
             tags={project.tags}
+            link={project.link}
           />
         ))}
       </div>
