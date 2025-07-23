@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import Star from "../../assets/Star.svg";
+import SectionTitle from "../common/SectionTitle";
 import ProjectCard from "../ProjectCard";
 import { projectsData } from "../../data/projects";
 
@@ -7,12 +7,9 @@ const Projects: FC = () => {
   const displayedProjects = projectsData.slice(0, 4);
 
   return (
-    <div className="text-white py-12">
-      <div className="flex items-center justify-between mb-12">
-        <h1 className="flex gap-2 text-4xl font-bold">
-          <img src={Star} alt="Star" className="w-10 h-10" />
-          Projects
-        </h1>
+    <div className="text-white">
+      <div className="flex items-center justify-between">
+        <SectionTitle>Projects</SectionTitle>
         <button className="text-white/70 hover:text-white underline text-sm transition-colors">
           view all
         </button>
