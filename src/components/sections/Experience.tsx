@@ -11,7 +11,7 @@ const Experience: FC = () => {
       {displayedExperience.map((experience) => (
         <div key={experience.title} className="mb-10">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl">{experience.title}</h1>
+            <h2 className="text-2xl">{experience.title}</h2>
             <div className="flex flex-col justify-end items-end gap-2">
               <h1 className="text-xl font-semibold">{experience.company}</h1>
               <p>
