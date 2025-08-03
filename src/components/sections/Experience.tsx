@@ -9,7 +9,7 @@ const Experience: FC = () => {
     <section className="text-white">
       <SectionTitle>Experience</SectionTitle>
       {displayedExperience.map((experience) => (
-        <div key={experience.title} className="mb-10">
+        <div key={experience.title} className="mt-10">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl">{experience.title}</h2>
             <div className="flex flex-col justify-end items-end gap-2">
