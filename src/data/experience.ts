@@ -4,7 +4,7 @@ export const experienceData: Experience[] = [
   {
     title: "Technical Lead & Product Manager",
     company: "Shipprojects",
-    startDate: "Fev 2025",
+    startDate: "Feb 2025",
     endDate: "Present",
   },
   {

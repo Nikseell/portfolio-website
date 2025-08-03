@@ -15,6 +15,14 @@
     font-family: "Syne", sans-serif;
   }
 
+  h1 {
+    font-weight: 800;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
   p {
     font-family: "Poppins", sans-serif;
   }

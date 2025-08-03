@@ -20,10 +20,7 @@ const Hero: FC = () => {
       <div className="flex flex-col min-h-screen px-8">
         <div className="flex-1 flex items-center justify-center mt-26">
           <div className="text-center">
-            <h1
-              className="text-white text-5xl leading-tight flex flex-col items-center gap-4"
-              style={{ fontWeight: 800 }}
-            >
+            <h1 className="text-white text-5xl leading-tight flex flex-col items-center gap-4">
               <div className="flex items-center gap-6">
                 I AM A
                 <div
