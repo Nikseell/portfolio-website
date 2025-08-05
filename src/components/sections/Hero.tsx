@@ -4,7 +4,7 @@ import Beams from "../animations/Beam";
 const Hero: FC = () => {
   return (
     <section className="min-h-screen relative">
-      <div className="absolute inset-0 -mx-54 -z-10">
+      <div className="absolute inset-0 -z-10 left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen">
         <Beams
           beamWidth={2}
           beamHeight={20}

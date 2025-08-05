@@ -27,37 +27,43 @@ const Navigation: FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-54 py-6 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300${
         isScrolled
           ? "bg-black/80 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <Link
-        to="/"
-        className="text-white text-2xl font-bold hover:text-gray-300 transition-colors w-40"
-      >
-        NL.
-      </Link>
+      <div className="flex items-center w-full max-w-[90rem]">
+        <div className="flex-1 flex justify-start">
+          <Link
+            to="/"
+            className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
+          >
+            NL.
+          </Link>
+        </div>
 
-      <div className="flex items-center space-x-8">
-        <Link to="/" className={getLinkClassName("/")}>
-          Home
-        </Link>
-        <Link to="/about" className={getLinkClassName("/about")}>
-          About
-        </Link>
-        <Link to="/projects" className={getLinkClassName("/projects")}>
-          Projects
-        </Link>
-        <Link to="/contact" className={getLinkClassName("/contact")}>
-          Contact
-        </Link>
+        <div className="flex items-center space-x-8">
+          <Link to="/" className={getLinkClassName("/")}>
+            Home
+          </Link>
+          <Link to="/about" className={getLinkClassName("/about")}>
+            About
+          </Link>
+          <Link to="/projects" className={getLinkClassName("/projects")}>
+            Projects
+          </Link>
+          <Link to="/contact" className={getLinkClassName("/contact")}>
+            Contact
+          </Link>
+        </div>
+
+        <div className="flex-1 flex justify-end">
+          <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
+            Download CV
+          </button>
+        </div>
       </div>
-
-      <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-40">
-        Download CV
-      </button>
     </nav>
   );
 };

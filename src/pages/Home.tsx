@@ -6,7 +6,6 @@ import Experience from "../components/sections/Experience";
 import Footer from "../components/common/Footer";
 import Expertise from "../components/sections/Expertise";
 import TextMarquee from "../components/TextMarquee";
-import SkillsMarquee from "../components/SkillsMarquee";
 
 const Home: FC = () => {
   return (
