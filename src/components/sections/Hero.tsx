@@ -4,20 +4,20 @@ import Beams from "../animations/Beam";
 const Hero: FC = () => {
   return (
     <section className="min-h-screen relative">
-      <div className="absolute inset-0 -z-10 left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen">
+      <div className="absolute inset-0 -z-10">
         <Beams
-          beamWidth={2}
-          beamHeight={20}
-          beamNumber={12}
-          lightColor="darkgray"
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="lightgray"
           speed={2}
-          noiseIntensity={2}
+          noiseIntensity={1.75}
           scale={0.2}
-          rotation={45}
+          rotation={30}
         />
       </div>
 
-      <div className="flex flex-col min-h-screen px-8">
+      <div className="flex flex-col min-h-screen px-8 max-w-[90rem] mx-auto">
         <div className="flex-1 flex items-center justify-center mt-26">
           <div className="text-center">
             <h1 className="text-white text-5xl leading-tight flex flex-col items-center gap-4">

@@ -4,7 +4,6 @@ import Layout from "../components/common/Layout";
 const Contact: FC = () => {
   return (
     <Layout>
-      {/* Contact page - Contact form and information */}
       <div className="min-h-screen flex items-center justify-center">
         <h1 className="text-white text-4xl font-bold">Contact Page</h1>
       </div>
