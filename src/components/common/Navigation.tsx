@@ -27,13 +27,13 @@ const Navigation: FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300${
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300 w-full${
         isScrolled
           ? "bg-black/80 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center w-full max-w-[90rem]">
+      <div className="flex items-center w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="flex-1 flex justify-start">
           <Link
             to="/"
