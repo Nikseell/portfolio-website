@@ -16,7 +16,7 @@ const Navigation: FC = () => {
   }, []);
   
   const getLinkClassName = (path: string) => {
-    const baseClasses = "px-4 py-1 text-sm md:text-base md:px-6 py-2 rounded-full font-medium transition-colors";
+    const baseClasses = "px-4 py-1 text-nav md:px-6 py-2 rounded-full font-medium transition-colors";
     const activeClasses = "bg-white text-black";
     const inactiveClasses = "text-white hover:text-gray-300";
 
@@ -59,7 +59,7 @@ const Navigation: FC = () => {
         </div>
 
         <div className="flex-1 hidden md:flex justify-end text-nowrap w-40">
-          <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
+          <button className="border border-white text-white text-nav px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
             Download CV
           </button>
         </div>

@@ -7,8 +7,8 @@ interface SectionTitleProps {
 
 const SectionTitle: FC<SectionTitleProps> = ({ children }) => {
   return (
-    <h1 className="flex gap-2 text-4xl font-bold mb-12 text-white">
-      <img src={Star} alt="Star" className="w-10 h-10" />
+    <h1 className="flex gap-2 text-heading-secondary font-bold md:mb-12 mb-6 text-white items-center ">
+      <img src={Star} alt="Star" className="w-6 h-6 md:w-8 md:h-8 xl:w-10 xl:h-10 flex" />
       {children}
     </h1>
   );

@@ -32,7 +32,7 @@ const Hero: FC = () => {
       <div className="flex flex-col min-h-screen">
         <div className="flex-1 flex items-center justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-26">
           <div className="text-center">
-            <h1 className="text-white text-md sm:text-2xl md:text-3xl xl:text-5xl leading-tight text-center">
+            <h1 className="text-white text-heading-primary leading-tight text-center">
               <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
                 <div className="flex flex-row items-center gap-3 sm:gap-4 md:gap-6">
                   <span>I AM A</span>
@@ -56,19 +56,19 @@ const Hero: FC = () => {
         <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 pb-8 sm:pb-12 md:pb-16 text-[#CBCBCB] w-full">
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
             <div
-              className="text-white text-xl sm:text-2xl md:text-3xl"
+              className="text-white text-accent"
               style={{ fontFamily: "Syne" }}
             >
               react
             </div>
             <div
-              className="text-white text-xl sm:text-2xl md:text-3xl"
+              className="text-white text-accent"
               style={{ fontFamily: "Syne" }}
             >
               nestjs
             </div>
             <div
-              className="text-white text-xl sm:text-2xl md:text-3xl"
+              className="text-white text-accent"
               style={{ fontFamily: "Syne" }}
             >
               unity
@@ -76,7 +76,7 @@ const Hero: FC = () => {
           </div>
 
           <div className="max-w-xl lg:max-w-sm xl:max-w-md">
-            <p className="text-[#CBCBCB] text-xs sm:text-sm md:text-lg leading-relaxed text-center lg:text-left">
+            <p className="text-[#CBCBCB] text-body leading-relaxed text-center lg:text-left">
               Welcome to my portfolio. Here, artistry meets functionality. Dive
               into a curated showcase of distinctive branding and web designs,
               each crafted to captivate and inspire.

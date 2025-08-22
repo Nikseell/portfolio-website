@@ -27,3 +27,36 @@
     font-family: "Poppins", sans-serif;
   }
 }
+
+@layer utilities {
+
+  /* Main heading */
+  .text-heading-primary {
+    @apply text-sm sm:text-2xl md:text-3xl xl:text-4xl;
+  }
+  
+  /* Section titles */
+  .text-heading-secondary {
+    @apply text-xl sm:text-2xl xl:text-4xl;
+  }
+  
+  /* Sub headings*/
+  .text-heading-tertiary {
+    @apply text-lg sm:text-xl md:text-xl xl:text-2xl;
+  }
+  
+  /* Accent text */
+  .text-accent {
+    @apply text-lg sm:text-xl md:text-2xl xl:text-3xl;
+  }
+  
+  /* Body text */
+  .text-body {
+    @apply text-xs sm:text-base md:text-lg xl:text-xl;
+  }
+  
+  /* Navigation text */
+  .text-nav {
+    @apply text-xs md:text-base;
+  }
+}

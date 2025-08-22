@@ -11,8 +11,8 @@ const Home: FC = () => {
   return (
     <Layout>
       <Hero />
-      {/* <Expertise />
-      <Projects />
+       <Expertise />
+      {/*<Projects />
       <Experience />
       <TextMarquee />
       <Footer /> */}
