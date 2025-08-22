@@ -14,9 +14,9 @@ const Navigation: FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   const getLinkClassName = (path: string) => {
-    const baseClasses = "px-6 py-2 rounded-full font-medium transition-colors";
+    const baseClasses = "px-4 py-1 text-sm md:text-base md:px-6 py-2 rounded-full font-medium transition-colors";
     const activeClasses = "bg-white text-black";
     const inactiveClasses = "text-white hover:text-gray-300";
 
@@ -33,8 +33,8 @@ const Navigation: FC = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="flex-1 flex justify-start">
+      <div className="flex items-center w-full max-w-[90rem] px-4">
+        <div className="justify-start hidden md:block w-40">
           <Link
             to="/"
             className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
@@ -43,7 +43,7 @@ const Navigation: FC = () => {
           </Link>
         </div>
 
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center w-full justify-center space-x-2 md:space-x-2">
           <Link to="/" className={getLinkClassName("/")}>
             Home
           </Link>
@@ -58,7 +58,7 @@ const Navigation: FC = () => {
           </Link>
         </div>
 
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 hidden md:flex justify-end text-nowrap w-40">
           <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
             Download CV
           </button>
