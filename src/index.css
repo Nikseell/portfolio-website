@@ -54,9 +54,4 @@
   .text-body {
     @apply text-xs sm:text-base md:text-lg xl:text-xl;
   }
-  
-  /* Navigation text */
-  .text-nav {
-    @apply text-xs md:text-base;
-  }
 }
