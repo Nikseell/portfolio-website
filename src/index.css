@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
   body {
     background-color: #010208;
-    font-family: "Syne", sans-serif;
+    font-family: 'Syne', sans-serif;
   }
 
   h1,
@@ -12,7 +12,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Syne", sans-serif;
+    font-family: 'Syne', sans-serif;
   }
 
   h1 {
@@ -24,34 +24,33 @@
   }
 
   p {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
 @layer utilities {
-
   /* Main heading */
   .text-heading-primary {
     @apply text-sm sm:text-2xl md:text-3xl xl:text-4xl;
   }
-  
+
   /* Section titles */
   .text-heading-secondary {
     @apply text-xl sm:text-2xl xl:text-4xl;
   }
-  
+
   /* Sub headings*/
   .text-heading-tertiary {
     @apply text-lg sm:text-xl md:text-xl xl:text-2xl;
   }
-  
+
   /* Accent text */
   .text-accent {
     @apply text-lg sm:text-xl md:text-2xl xl:text-3xl;
   }
-  
+
   /* Body text */
   .text-body {
-    @apply text-xs sm:text-base md:text-lg xl:text-xl;
+    @apply text-xs sm:text-base md:text-lg xl:text-lg;
   }
 }
