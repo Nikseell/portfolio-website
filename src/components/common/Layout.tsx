@@ -1,8 +1,8 @@
-import { type FC, type ReactNode } from "react";
-import Navigation from "./Navigation";
+import { type FC, type ReactNode } from 'react'
+import Navigation from './Navigation'
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
@@ -15,12 +15,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       ></div>
 
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col items-center">
-        <main className="flex flex-col gap-10 sm:gap-12 md:gap-16 lg:gap-20 max-w-[90rem] w-full">
-          {children}
-        </main>
+        <main className="flex flex-col gap-10 sm:gap-12 md:gap-16 lg:gap-20 max-w-[65rem] w-full">{children}</main>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

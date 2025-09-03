@@ -1,71 +1,79 @@
-import { type FC, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { type FC, useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navigation: FC = () => {
-  const location = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation()
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
-    };
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const getLinkClassName = (path: string) => {
-    const baseClasses = "px-4 py-1 text-xs md:text-base md:px-6 py-2 rounded-full font-medium transition-colors";
-    const activeClasses = "bg-white text-black";
-    const inactiveClasses = "text-white hover:text-gray-300";
+    const baseClasses = 'px-4 py-1 text-xs md:text-base md:px-6 py-2 rounded-full font-medium transition-colors'
+    const activeClasses = 'bg-white text-black'
+    const inactiveClasses = 'text-white hover:text-gray-300'
 
-    return `${baseClasses} ${
-      location.pathname === path ? activeClasses : inactiveClasses
-    }`;
-  };
+    return `${baseClasses} ${location.pathname === path ? activeClasses : inactiveClasses}`
+  }
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300 w-full${
-        isScrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent"
+        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
     >
-      <div className="flex items-center w-full max-w-[90rem] px-4">
-        <div className="justify-start hidden md:block w-40">
+      <div className="flex items-center w-full max-w-[70rem] px-4">
+        {/* <div className="justify-start hidden md:block w-40">
           <Link
             to="/"
             className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
           >
             NL.
           </Link>
-        </div>
+        </div> */}
 
         <div className="flex items-center w-full justify-center space-x-2 md:space-x-2">
-          <Link to="/" className={getLinkClassName("/")}>
+          <Link
+            to="/"
+            className={getLinkClassName('/')}
+          >
             Home
           </Link>
-          <Link to="/about" className={getLinkClassName("/about")}>
+          <Link
+            to="/about"
+            className={getLinkClassName('/about')}
+          >
             About
           </Link>
-          <Link to="/projects" className={getLinkClassName("/projects")}>
+          <Link
+            to="/projects"
+            className={getLinkClassName('/projects')}
+          >
             Projects
           </Link>
-          <Link to="/contact" className={getLinkClassName("/contact")}>
+          <Link
+            to="/contact"
+            className={getLinkClassName('/contact')}
+          >
             Contact
           </Link>
         </div>
 
-        <div className="flex-1 hidden md:flex justify-end text-nowrap w-40">
+        {/* <div className="flex-1 hidden md:flex justify-end text-nowrap w-40">
           <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
             Download CV
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
