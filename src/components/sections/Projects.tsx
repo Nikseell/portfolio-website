@@ -7,7 +7,7 @@ const Projects: FC = () => {
   const displayedProjects = projectsData.slice(0, 4)
 
   return (
-    <div className="text-white">
+    <div className="text-white h-fit">
       <div className="flex items-center justify-between pb-8">
         <div className="section-header">Projects</div>
       </div>
