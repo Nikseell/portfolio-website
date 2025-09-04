@@ -13,7 +13,7 @@ const Hero: FC = () => {
             <p className="text-[#8B8B8B] mb-3 text-xl">Hey! It's me Niklavs</p>
 
             <div className="flex mb-8">
-              <h1 className="text-[#DFDFDF] text-6xl font-medium">
+              <h1 className="main-header">
                 Software
                 <br />
                 Developer
@@ -27,7 +27,7 @@ const Hero: FC = () => {
               </p>
             </div>
 
-            <div className="flex space-x-4 pt-4">
+            <div className="flex space-x-2 pt-4">
               <IconButton
                 href="https://github.com"
                 target="_blank"
@@ -89,7 +89,7 @@ const Hero: FC = () => {
           </div>
           <CodeEditor
             cursor
-            className="flex-1 h-[300px]"
+            className="flex-1 h-[300px] bg-[#191919]"
             lang="tsx"
             title="component.tsx"
             icon={<i className="flex devicon-react-original text-md text-[#F3F3F3]"></i>}

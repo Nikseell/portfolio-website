@@ -147,3 +147,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .main-header {
+    @apply text-[#DFDFDF] text-6xl font-medium;
+  }
+
+  .section-header {
+    @apply text-[#DFDFDF] text-5xl font-medium;
+  }
+}
