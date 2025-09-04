@@ -1,9 +1,12 @@
 import { type FC } from 'react'
 import Skills from './Skills'
+import { CodeEditor } from '@/components/animate-ui/components/code-editor'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionPanel } from '@/components/animate-ui/base/accordion'
+import IconButton from '@/components/common/IconButton'
 
 const Hero: FC = () => {
   return (
-    <section className="h-[80vh] pt-36">
+    <section className="h-fit pt-36">
       <div className="flex flex-col h-full">
         <div className="flex items-center">
           <div className="">
@@ -25,35 +28,87 @@ const Hero: FC = () => {
             </div>
 
             <div className="flex space-x-4 pt-4">
-              <a
+              <IconButton
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#333333] bg-[#141414] opacity-60 hover:opacity-100 duration-300"
               >
-                <i className="devicon-github-original text-2xl text-[#F3F3F3] "></i>
-              </a>
-              <a
+                <i className="devicon-github-original text-2xl text-[#F3F3F3]"></i>
+              </IconButton>
+
+              <IconButton
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#333333] bg-[#141414] opacity-60 hover:opacity-100 duration-300"
               >
                 <i className="devicon-linkedin-plain text-2xl text-[#F3F3F3]"></i>
-              </a>
-              <a
-                href="https://linkedin.com"
+              </IconButton>
+
+              <IconButton
+                href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#333333] bg-[#141414] opacity-60 hover:opacity-100 duration-300"
               >
                 <i className="devicon-twitter-plain text-2xl text-[#F3F3F3]"></i>
-              </a>
+              </IconButton>
             </div>
           </div>
         </div>
-        <div className="mt-20">
+        <div className="mt-16">
           <Skills />
+        </div>
+        <div className="pt-20 flex justify-end">
+          <div className="flex-1">
+            <h1 className="text-[#DFDFDF] text-4xl font-semibold">What I do?</h1>
+
+            <div className="mt-8 max-w-sm">
+              <Accordion>
+                <AccordionItem value="frontend">
+                  <AccordionTrigger className="text-[#DFDFDF]">Frontend Development</AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF]">
+                    Building responsive and interactive user interfaces with React, TypeScript, and modern CSS
+                    frameworks like Tailwind.
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem value="unity">
+                  <AccordionTrigger className="text-[#DFDFDF]">Unity Development</AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF]">
+                    Creating engaging and interactive game experiences with Unity and C#.
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem value="backend">
+                  <AccordionTrigger className="text-[#DFDFDF]">Backend Development</AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF]">
+                    Creating robust APIs and server-side applications with Node.js and databases.
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+          <CodeEditor
+            cursor
+            className="flex-1 h-[300px]"
+            lang="tsx"
+            title="component.tsx"
+            icon={<i className="flex devicon-react-original text-md text-[#F3F3F3]"></i>}
+            duration={15}
+            delay={0.5}
+            copyButton
+          >
+            {`import { useState } from 'react'
+
+export default function CoffeeTracker() {
+  const [cups, setCups] = useState(0)
+  
+  return (
+    <button onClick={() => setCups(cups + 1)}>
+      ☕ {cups} {cups === 1 ? 'cup' : 'cups'}
+    </button>
+  )
+}`}
+          </CodeEditor>
         </div>
       </div>
     </section>

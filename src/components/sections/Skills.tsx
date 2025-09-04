@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
             className="flex flex-row items-center mx-8 opacity-60"
           >
             <i className={`${skill.icon} text-3xl text-white`}></i>
-            <span className="text-sm md:text-base text-white ml-2 font-semibold">{skill.name}</span>
+            <span className="text-sm md:text-base text-white ml-2 font-medium">{skill.name}</span>
           </div>
         ))}
       </Marquee>
