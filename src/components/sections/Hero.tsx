@@ -20,10 +20,10 @@ const Hero: FC = () => {
               </h1>
 
               <p className="text-white text-2xl pl-16 mt-3 max-w-2xl">
-                <span className="opacity-60">Experienced developer with expertise in </span>
-                <span className="text-[#8B5CF6]">React</span> <span className="opacity-60">and </span>
+                <span className="text-white/60">Experienced developer with expertise in </span>
+                <span className="text-[#8B5CF6]">React</span> <span className="text-white/60">and </span>
                 <span className="text-[#8B5CF6]">Unity</span>,
-                <span className="opacity-60"> creating engaging web and game experiences.</span>
+                <span className="text-white/60"> creating engaging web and game experiences.</span>
               </p>
             </div>
 
@@ -33,7 +33,7 @@ const Hero: FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="devicon-github-original text-2xl text-[#F3F3F3]"></i>
+                <i className="devicon-github-original text-2xl text-[#F3F3F3]/60 group-hover:text-[#F3F3F3] transition-colors duration-300"></i>
               </IconButton>
 
               <IconButton
@@ -41,7 +41,7 @@ const Hero: FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="devicon-linkedin-plain text-2xl text-[#F3F3F3]"></i>
+                <i className="devicon-linkedin-plain text-2xl text-[#F3F3F3]/60 group-hover:text-[#F3F3F3] transition-colors duration-300"></i>
               </IconButton>
 
               <IconButton
@@ -49,7 +49,7 @@ const Hero: FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="devicon-twitter-plain text-2xl text-[#F3F3F3]"></i>
+                <i className="devicon-twitter-plain text-2xl text-[#F3F3F3]/60 group-hover:text-[#F3F3F3] transition-colors duration-300"></i>
               </IconButton>
             </div>
           </div>

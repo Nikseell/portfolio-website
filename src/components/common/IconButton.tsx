@@ -13,7 +13,7 @@ interface IconButtonProps {
 
 const IconButton: FC<IconButtonProps> = ({ href, onClick, children, className, size = 'md', target, rel }) => {
   const baseClasses =
-    'flex items-center justify-center rounded-xl border border-[#333333] bg-[#141414] hover:bg-[#242424] duration-300 transition-all'
+    'group flex items-center justify-center rounded-xl border border-[#333333] bg-[#141414] hover:bg-[#242424] duration-300 transition-all'
 
   const sizeClasses = {
     sm: 'w-10 h-10',

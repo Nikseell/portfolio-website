@@ -11,11 +11,10 @@ const Home: FC = () => {
   return (
     <Layout>
       <Hero />
-      {/* <Expertise /> */}
       <Projects />
+      <Expertise />
       <Experience />
-      {/* <TextMarquee />
-      <Footer /> */}
+      <Footer />
     </Layout>
   )
 }
