@@ -150,10 +150,30 @@
 
 @layer utilities {
   .main-header {
-    @apply text-[#DFDFDF] text-6xl font-medium;
+    @apply text-[#DFDFDF] text-5xl sm:text-6xl lg:text-6xl font-medium;
   }
 
   .section-header {
-    @apply text-[#DFDFDF] text-5xl font-medium;
+    @apply text-[#DFDFDF] text-3xl sm:text-4xl lg:text-5xl font-medium;
+  }
+
+  .hero-subtitle {
+    @apply text-white text-lg sm:text-2xl lg:text-2xl;
+  }
+
+  .hero-greeting {
+    @apply text-white/60 text-lg sm:text-xl mb-3;
+  }
+
+  .hero-description {
+    @apply text-white/60 text-lg sm:text-2xl lg:text-2xl;
+  }
+
+  .section-title {
+    @apply text-[#DFDFDF] text-3xl sm:text-4xl lg:text-4xl font-semibold;
+  }
+
+  .accordion-text {
+    @apply text-base sm:text-base lg:text-xl;
   }
 }

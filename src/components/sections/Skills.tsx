@@ -29,10 +29,10 @@ const Skills: React.FC = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-row items-center mx-8 opacity-60"
+            className="flex flex-row items-center mx-4 sm:mx-6 md:mx-8 opacity-60"
           >
             <i className={`${skill.icon} text-3xl text-white`}></i>
-            <span className="text-sm md:text-base text-white ml-2 font-medium">{skill.name}</span>
+            <span className="text-sm sm:text-base md:text-xl text-white ml-2 font-medium">{skill.name}</span>
           </div>
         ))}
       </Marquee>

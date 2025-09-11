@@ -8,29 +8,29 @@ const Hero: FC = () => {
   return (
     <section
       id="home"
-      className="h-fit pt-36"
+      className="h-fit pt-20 sm:pt-26 md:pt-36 px-4 sm:px-6 lg:px-8"
     >
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full max-w-7xl mx-auto">
         <div className="flex items-center">
-          <div className="">
-            <p className="text-[#8B8B8B] mb-3 text-xl">Hey! It's me Niklavs</p>
+          <div className="flex flex-col w-full">
+            <p className="hero-greeting">Hey! It's me Niklavs</p>
 
-            <div className="flex mb-8">
-              <h1 className="main-header">
+            <div className="flex flex-col lg:flex-row mb-4 items-start lg:items-center gap-4 lg:gap-8">
+              <h1 className="main-header flex-shrink-0">
                 Software
                 <br />
                 Developer
               </h1>
 
-              <p className="text-white text-2xl pl-16 mt-3 max-w-2xl">
-                <span className="text-white/60">Experienced developer with expertise in </span>
-                <span className="text-[#8B5CF6]">React</span> <span className="text-white/60">and </span>
+              <p className="hero-subtitle sm:mt-3 max-w-2xl md:max-w-lg">
+                <span className="hero-description">Experienced developer with expertise in </span>
+                <span className="text-[#8B5CF6]">React</span> <span className="hero-description">and </span>
                 <span className="text-[#8B5CF6]">Unity</span>,
-                <span className="text-white/60"> creating engaging web and game experiences.</span>
+                <span className="hero-description"> creating engaging web and game experiences.</span>
               </p>
             </div>
 
-            <div className="flex space-x-2 pt-4">
+            <div className="flex space-x-2 pt-6">
               <IconButton
                 href="https://github.com"
                 target="_blank"
@@ -57,33 +57,39 @@ const Hero: FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16">
+        <div className="mt-12 sm:mt-16 lg:mt-20">
           <Skills />
         </div>
-        <div className="pt-20 flex justify-end">
-          <div className="flex-1">
-            <h1 className="text-[#DFDFDF] text-4xl font-semibold">What I do?</h1>
+        <div className="pt-16 sm:pt-20 lg:pt-24 flex flex-col md:flex-row mb-8 gap-6 md:gap-8">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left">
+            <h1 className="section-title mb-6 sm:mb-8">What I do?</h1>
 
-            <div className="mt-8 max-w-sm">
+            <div className="w-full max-w-2xl text-left md:pr-14">
               <Accordion>
                 <AccordionItem value="frontend">
-                  <AccordionTrigger className="text-[#DFDFDF]">Frontend Development</AccordionTrigger>
-                  <AccordionPanel className="text-[#BFBFBF]">
+                  <AccordionTrigger className="text-[#DFDFDF] accordion-text text-left">
+                    Frontend Development
+                  </AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF] accordion-text text-left">
                     Building responsive and interactive user interfaces with React, TypeScript, and modern CSS
                     frameworks like Tailwind.
                   </AccordionPanel>
                 </AccordionItem>
 
                 <AccordionItem value="unity">
-                  <AccordionTrigger className="text-[#DFDFDF]">Unity Development</AccordionTrigger>
-                  <AccordionPanel className="text-[#BFBFBF]">
+                  <AccordionTrigger className="text-[#DFDFDF] accordion-text text-left">
+                    Unity Development
+                  </AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF] accordion-text text-left">
                     Creating engaging and interactive game experiences with Unity and C#.
                   </AccordionPanel>
                 </AccordionItem>
 
                 <AccordionItem value="backend">
-                  <AccordionTrigger className="text-[#DFDFDF]">Backend Development</AccordionTrigger>
-                  <AccordionPanel className="text-[#BFBFBF]">
+                  <AccordionTrigger className="text-[#DFDFDF] accordion-text text-left">
+                    Backend Development
+                  </AccordionTrigger>
+                  <AccordionPanel className="text-[#BFBFBF] accordion-text text-left">
                     Creating robust APIs and server-side applications with Node.js and databases.
                   </AccordionPanel>
                 </AccordionItem>
@@ -92,7 +98,7 @@ const Hero: FC = () => {
           </div>
           <CodeEditor
             cursor
-            className="flex-1 h-[300px] bg-[#191919]"
+            className="w-full md:w-1/2 h-[250px] sm:h-[300px] lg:h-[350px] bg-[#191919]"
             lang="tsx"
             title="component.tsx"
             icon={<i className="flex devicon-react-original text-md text-[#F3F3F3]"></i>}
