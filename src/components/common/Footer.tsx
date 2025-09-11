@@ -3,7 +3,10 @@ import { type FC } from 'react'
 
 const Footer: FC = () => {
   return (
-    <footer className="flex flex-col gap-8">
+    <footer
+      id="contact"
+      className="flex flex-col gap-8"
+    >
       <h1 className="flex justify-center main-header">Let's talk!</h1>
       <button
         onClick={() => window.open('mailto:niklavs.laicans@gmail.com', '_blank')}

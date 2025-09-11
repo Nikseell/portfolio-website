@@ -5,7 +5,10 @@ const Experience: FC = () => {
   const displayedExperience = experienceData.slice(0, 4)
 
   return (
-    <div className="text-white h-fit">
+    <section
+      id="experience"
+      className="text-white h-fit"
+    >
       <div className="flex items-center justify-between pb-8">
         <div className="section-header">Experience</div>
       </div>
@@ -29,7 +32,7 @@ const Experience: FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

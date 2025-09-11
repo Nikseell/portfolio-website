@@ -1,26 +1,47 @@
 import { type FC, useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 
 const Navigation: FC = () => {
-  const location = useLocation()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
       setIsScrolled(scrollTop > 50)
+
+      const sections = ['home', 'projects', 'expertise', 'experience']
+      const sectionElements = sections.map((id) => document.getElementById(id))
+
+      for (let i = sectionElements.length - 1; i >= 0; i--) {
+        const section = sectionElements[i]
+        if (section && scrollTop >= section.offsetTop - 120) {
+          setActiveSection(sections[i])
+          break
+        }
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const getLinkClassName = (path: string) => {
-    const baseClasses = 'px-4 py-1 text-xs md:text-base md:px-6 py-2 rounded-full font-medium transition-colors'
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 120,
+        behavior: 'smooth',
+      })
+    }
+  }
+
+  const getLinkClassName = (sectionId: string) => {
+    const baseClasses =
+      'px-4 py-1 text-xs md:text-base md:px-6 py-2 rounded-full font-medium transition-colors cursor-pointer'
     const activeClasses = 'bg-white text-black'
     const inactiveClasses = 'text-white hover:text-gray-300'
 
-    return `${baseClasses} ${location.pathname === path ? activeClasses : inactiveClasses}`
+    return `${baseClasses} ${activeSection === sectionId ? activeClasses : inactiveClasses}`
   }
 
   return (
@@ -40,37 +61,31 @@ const Navigation: FC = () => {
         </div> */}
 
         <div className="flex items-center w-full justify-center space-x-2 md:space-x-2">
-          <Link
-            to="/"
-            className={getLinkClassName('/')}
+          <button
+            onClick={() => scrollToSection('home')}
+            className={getLinkClassName('home')}
           >
             Home
-          </Link>
-          <Link
-            to="/about"
-            className={getLinkClassName('/about')}
-          >
-            About
-          </Link>
-          <Link
-            to="/projects"
-            className={getLinkClassName('/projects')}
+          </button>
+          <button
+            onClick={() => scrollToSection('projects')}
+            className={getLinkClassName('projects')}
           >
             Projects
-          </Link>
-          <Link
-            to="/contact"
-            className={getLinkClassName('/contact')}
-          >
-            Contact
-          </Link>
-        </div>
-
-        {/* <div className="flex-1 hidden md:flex justify-end text-nowrap w-40">
-          <button className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
-            Download CV
           </button>
-        </div> */}
+          <button
+            onClick={() => scrollToSection('expertise')}
+            className={getLinkClassName('expertise')}
+          >
+            Expertise
+          </button>
+          <button
+            onClick={() => scrollToSection('experience')}
+            className={getLinkClassName('experience')}
+          >
+            Experience
+          </button>
+        </div>
       </div>
     </nav>
   )

@@ -6,7 +6,10 @@ import IconButton from '@/components/common/IconButton'
 
 const Hero: FC = () => {
   return (
-    <section className="h-fit pt-36">
+    <section
+      id="home"
+      className="h-fit pt-36"
+    >
       <div className="flex flex-col h-full">
         <div className="flex items-center">
           <div className="">

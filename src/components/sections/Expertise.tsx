@@ -2,7 +2,10 @@ import { expertiseData } from '../../data/expertise'
 
 const Expertise = () => {
   return (
-    <div className="text-white h-fit">
+    <section
+      id="expertise"
+      className="text-white h-fit"
+    >
       <div className="flex items-center justify-between pb-8">
         <div className="section-header">Expertise</div>
       </div>
@@ -22,7 +25,7 @@ const Expertise = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
