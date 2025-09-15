@@ -8,7 +8,7 @@ const Hero: FC = () => {
   return (
     <section
       id="home"
-      className="h-fit pt-20 sm:pt-26 md:pt-36"
+      className="h-fit pt-10 md:pt-36"
     >
       <div className="flex flex-col h-full max-w-7xl mx-auto">
         <div className="flex items-center">
