@@ -12,18 +12,18 @@ const Experience: FC = () => {
       <div className="flex items-center justify-between pb-8">
         <div className="section-header">Experience</div>
       </div>
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {displayedExperience.map((experience) => (
           <div
             key={experience.title}
-            className="border border-[#333333] bg-[#141414] rounded-xl p-6"
+            className="border border-[#333333] bg-[#141414] rounded-xl p-4 sm:p-6"
           >
-            <div className="flex justify-between items-start">
-              <div>
-                <h2 className="text-xl font-semibold text-[#DFDFDF]">{experience.title}</h2>
-                <h3 className="text-lg text-[#8B5CF6] mt-1">{experience.company}</h3>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+              <div className="flex-1">
+                <h2 className="text-lg sm:text-xl font-semibold text-[#DFDFDF]">{experience.title}</h2>
+                <h3 className="text-base sm:text-lg text-[#8B5CF6] mt-1">{experience.company}</h3>
               </div>
-              <div className="text-right">
+              <div className="text-left sm:text-right mt-2 sm:mt-0 sm:ml-4">
                 <p className="text-[#BFBFBF] text-sm">
                   {experience.startDate} - {experience.endDate}
                 </p>
