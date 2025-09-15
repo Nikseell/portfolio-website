@@ -13,7 +13,7 @@ const Expertise = () => {
         {expertiseData.map((expertise, index) => (
           <div
             key={index}
-            className="border border-[#333333] bg-[#191919] rounded-xl p-6"
+            className="border border-[#333333] bg-[#141414] rounded-xl p-6"
           >
             <div className="space-y-4">
               <div className="flex items-center gap-3">
