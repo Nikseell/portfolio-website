@@ -11,9 +11,9 @@ const Home: FC = () => {
     <Layout>
       <Hero />
       <Projects />
-      <Expertise />
+      {/*<Expertise />
       <Experience />
-      <Footer />
+      <Footer /> */}
     </Layout>
   )
 }
