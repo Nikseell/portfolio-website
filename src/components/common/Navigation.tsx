@@ -46,7 +46,7 @@ const Navigation: FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300 w-full${
+      className={`fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center py-6 transition-all duration-300 w-full${
         isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
     >
