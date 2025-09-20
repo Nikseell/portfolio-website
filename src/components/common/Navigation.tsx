@@ -9,7 +9,7 @@ const Navigation: FC = () => {
       const scrollTop = window.scrollY
       setIsScrolled(scrollTop > 50)
 
-      const sections = ['home', 'projects', 'expertise', 'experience']
+      const sections = ['home', 'work', 'skills', 'experience']
       const sectionElements = sections.map((id) => document.getElementById(id))
 
       for (let i = sectionElements.length - 1; i >= 0; i--) {
@@ -51,15 +51,6 @@ const Navigation: FC = () => {
       }`}
     >
       <div className="flex items-center w-full max-w-[70rem] px-4">
-        {/* <div className="justify-start hidden md:block w-40">
-          <Link
-            to="/"
-            className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
-          >
-            NL.
-          </Link>
-        </div> */}
-
         <div className="flex items-center w-full justify-center space-x-2 md:space-x-2">
           <button
             onClick={() => scrollToSection('home')}
@@ -68,16 +59,16 @@ const Navigation: FC = () => {
             Home
           </button>
           <button
-            onClick={() => scrollToSection('projects')}
-            className={getLinkClassName('projects')}
+            onClick={() => scrollToSection('work')}
+            className={getLinkClassName('work')}
           >
-            Projects
+            Work
           </button>
           <button
-            onClick={() => scrollToSection('expertise')}
-            className={getLinkClassName('expertise')}
+            onClick={() => scrollToSection('skills')}
+            className={getLinkClassName('skills')}
           >
-            Expertise
+            Skills
           </button>
           <button
             onClick={() => scrollToSection('experience')}

@@ -1,10 +1,10 @@
 import { type FC } from 'react'
-import { type ProjectCardProps } from '../types/project'
+import { type WorkCardProps } from '../types/work'
 import IconButton from './common/IconButton'
 import arrow from '../assets/icons/arrow.svg'
 import development from '../assets/icons/development.svg'
 
-const ProjectCard: FC<ProjectCardProps> = ({ title, tags, link, codeLink }) => {
+const WorkCard: FC<WorkCardProps> = ({ title, tags, link, codeLink }) => {
   return (
     <div className="flex flex-col overflow-hidden aspect-[3/3] sm:aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] h-full">
       <div className="flex w-full h-full bg-[#191919] rounded-2xl"></div>
@@ -48,4 +48,4 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, tags, link, codeLink }) => {
   )
 }
 
-export default ProjectCard
+export default WorkCard

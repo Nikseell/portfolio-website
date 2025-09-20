@@ -3,11 +3,11 @@ import { expertiseData } from '../../data/expertise'
 const Expertise = () => {
   return (
     <section
-      id="expertise"
+      id="skills"
       className="text-white h-fit"
     >
       <div className="flex items-center justify-between pb-8">
-        <div className="section-header">Expertise</div>
+        <div className="section-header">Skills</div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {expertiseData.map((expertise, index) => (

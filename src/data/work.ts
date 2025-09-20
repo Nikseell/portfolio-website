@@ -1,6 +1,6 @@
-import { type Project } from '../types/project'
+import { type Work } from '../types/work'
 
-export const projectsData: Project[] = [
+export const workData: Work[] = [
   {
     title: 'Minimal Portfolio Template',
     description: 'Ready-to-use minimal portfolio template - just add your content and deploy',
