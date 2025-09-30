@@ -150,11 +150,11 @@
 
 @layer utilities {
   .main-header {
-    @apply text-[#DFDFDF] text-5xl sm:text-6xl lg:text-6xl font-medium;
+    @apply text-white/90 text-5xl sm:text-6xl lg:text-6xl font-medium;
   }
 
   .section-header {
-    @apply text-[#DFDFDF] text-3xl sm:text-4xl lg:text-5xl font-medium;
+    @apply text-white/90 text-3xl sm:text-4xl lg:text-5xl font-medium;
   }
 
   .hero-subtitle {
@@ -170,7 +170,7 @@
   }
 
   .section-title {
-    @apply text-[#DFDFDF] text-3xl sm:text-4xl lg:text-4xl font-semibold;
+    @apply text-white/90 text-3xl sm:text-4xl lg:text-4xl font-semibold;
   }
 
   .accordion-text {

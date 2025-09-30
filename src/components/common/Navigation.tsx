@@ -38,20 +38,26 @@ const Navigation: FC = () => {
   const getLinkClassName = (sectionId: string) => {
     const baseClasses =
       'px-4 py-1 text-xs md:text-base md:px-6 py-2 rounded-full font-medium transition-colors cursor-pointer'
-    const activeClasses = 'bg-white text-black'
-    const inactiveClasses = 'text-white hover:text-gray-300'
+    const activeClasses = 'bg-white/90 text-black'
+    const inactiveClasses = 'text-white/90 hover:text-gray-300'
 
     return `${baseClasses} ${activeSection === sectionId ? activeClasses : inactiveClasses}`
   }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center py-6 transition-all duration-300 w-full${
-        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-      }`}
-    >
-      <div className="flex items-center w-full max-w-[70rem] px-4">
-        <div className="flex items-center w-full justify-center space-x-2 md:space-x-2">
+    <nav className="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center py-6 transition-all duration-300 w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div
+        className={`flex items-center justify-between max-w-[65rem] w-full px-6 py-3 rounded-full transition-all duration-300${
+          isScrolled
+            ? 'bg-black/80 backdrop-blur-md border border-white/10'
+            : 'bg-black/20 backdrop-blur-sm border border-white/20'
+        }`}
+      >
+        <div className="w-20 lg:w-40 text-white/90 font-bold text-xl">
+          <p>&lt;/&gt;</p>
+        </div>
+
+        <div className="flex items-center space-x-1">
           <button
             onClick={() => scrollToSection('home')}
             className={getLinkClassName('home')}
@@ -77,6 +83,11 @@ const Navigation: FC = () => {
             Experience
           </button>
         </div>
+
+        <button className="w-20 lg:w-40 py-2 text-white/90 border border-white/90 rounded-full font-medium hover:text-gray-300 transition-colors">
+          <span className="lg:hidden">CV</span>
+          <span className="hidden lg:inline">Download CV</span>
+        </button>
       </div>
     </nav>
   )

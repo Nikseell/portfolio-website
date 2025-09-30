@@ -38,7 +38,7 @@ const Work: FC = () => {
               >
                 <div className="flex items-center justify-center gap-1">
                   <p className="flex items-center justify-center opacity-60 group-hover:opacity-100 group-hover:text-white transition-all duration-300">
-                    {isExpanded ? 'View more work' : 'Show less'}
+                    {isExpanded ? 'Show less' : 'View more work'}
                   </p>
                 </div>
               </AccordionTrigger>
