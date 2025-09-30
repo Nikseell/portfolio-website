@@ -6,7 +6,7 @@ import development from '../assets/icons/development.svg'
 
 const WorkCard: FC<WorkCardProps> = ({ title, tags, link, codeLink }) => {
   return (
-    <div className="flex flex-col overflow-hidden aspect-[3/3] sm:aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] h-full">
+    <div className="flex flex-col overflow-hidden aspect-[4/3] sm:aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] h-full">
       <div className="flex w-full h-full bg-[#191919] rounded-2xl"></div>
 
       <div className="flex justify-between items-center mt-4">
