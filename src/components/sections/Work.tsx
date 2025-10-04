@@ -25,6 +25,8 @@ const Work: FC = () => {
             tags={work.tags}
             link={work.link}
             codeLink={work.codeLink}
+            imageUrl={work.imageUrl}
+            year={work.year}
           />
         ))}
       </div>
@@ -52,6 +54,8 @@ const Work: FC = () => {
                       tags={work.tags}
                       link={work.link}
                       codeLink={work.codeLink}
+                      imageUrl={work.imageUrl}
+                      year={work.year}
                     />
                   ))}
                 </div>

@@ -4,6 +4,8 @@ export interface Work {
   tags: string[]
   link?: string
   codeLink?: string
+  imageUrl?: string
+  year?: string
 }
 
 export interface WorkCardProps {
@@ -13,4 +15,5 @@ export interface WorkCardProps {
   link?: string
   codeLink?: string
   imageUrl?: string
+  year?: string
 }
