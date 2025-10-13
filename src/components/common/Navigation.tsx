@@ -84,7 +84,17 @@ const Navigation: FC = () => {
           </button>
         </div>
 
-        <button className="w-20 lg:w-40 py-2 text-white/90 border border-white/90 rounded-full font-medium hover:text-gray-300 transition-colors">
+        <button
+          onClick={() => {
+            const link = document.createElement('a')
+            link.href = '/cv.pdf'
+            link.download = 'Niklavs_Laicans_CV.pdf'
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+          }}
+          className="w-20 lg:w-40 py-2 text-white/90 border border-white/90 rounded-full font-medium hover:text-gray-300 transition-colors cursor-pointer"
+        >
           <span className="lg:hidden">CV</span>
           <span className="hidden lg:inline">Download CV</span>
         </button>
