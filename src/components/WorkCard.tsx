@@ -8,7 +8,7 @@ import defaultImage from '../assets/projects/default.png'
 const WorkCard: FC<WorkCardProps> = ({ title, tags, link, codeLink, imageUrl, year }) => {
   return (
     <div className="flex flex-col overflow-hidden aspect-[4/3] sm:aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] h-full">
-      <div className="flex w-full h-full bg-[#191919] rounded-2xl p-8 overflow-hidden">
+      <div className="flex w-full h-full bg-[#191919] rounded-2xl p-4 sm:p-8 overflow-hidden">
         {imageUrl ? (
           <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-xl hover:scale-105 transition-all duration-300">
             <img

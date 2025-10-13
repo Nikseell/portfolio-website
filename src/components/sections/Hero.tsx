@@ -3,6 +3,7 @@ import Skills from './Skills'
 import { CodeEditor } from '@/components/animate-ui/components/code-editor'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionPanel } from '@/components/animate-ui/base/accordion'
 import IconButton from '@/components/common/IconButton'
+import mailIcon from '../../assets/icons/mail.svg'
 
 const Hero: FC = () => {
   return (
@@ -32,7 +33,7 @@ const Hero: FC = () => {
 
             <div className="flex space-x-2 pt-6">
               <IconButton
-                href="https://github.com"
+                href="https://github.com/nikseell"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,7 +41,7 @@ const Hero: FC = () => {
               </IconButton>
 
               <IconButton
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/niklavs-laicans"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,11 +49,15 @@ const Hero: FC = () => {
               </IconButton>
 
               <IconButton
-                href="https://twitter.com"
+                href="mailto:niklavs.laicans@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="devicon-twitter-plain text-2xl text-[#F3F3F3]/60 group-hover:text-[#F3F3F3] transition-colors duration-300"></i>
+                <img
+                  src={'https://devicon-website.vercel.app/api/google/plain.svg?color=%23FFFFFF'}
+                  alt="Email"
+                  className="w-6 h-6 opacity-60 group-hover:opacity-100 transition-colors duration-300"
+                />
               </IconButton>
             </div>
           </div>
