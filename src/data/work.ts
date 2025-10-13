@@ -3,9 +3,17 @@ import minimalPortfolioImage from '../assets/projects/minimal-portfolio-template
 import githubTrafficFrontendImage from '../assets/projects/github-traffic-frontend.png'
 import ticTacToeImage from '../assets/projects/tic-tac-toe.png'
 import googleTrexCloneImage from '../assets/projects/google-trex-clone.png'
-import unityQuizGameImage from '../assets/projects/unity-quiz-game.png'
+import portfolioWebsiteImage from '../assets/projects/portfolio-website.png'
 
 export const workData: Work[] = [
+  {
+    title: 'Portfolio Website',
+    description: 'My portfolio website built with React and TypeScript',
+    tags: ['React', 'TypeScript'],
+    codeLink: 'https://github.com/nikseell/portfolio-website',
+    imageUrl: portfolioWebsiteImage,
+    year: '2025',
+  },
   {
     title: 'Minimal Portfolio Template',
     description: 'Ready-to-use minimal portfolio template - just add your content and deploy',
@@ -44,27 +52,5 @@ export const workData: Work[] = [
     codeLink: 'https://github.com/nikseell/google-trex-clone',
     imageUrl: googleTrexCloneImage,
     year: '2023',
-  },
-  {
-    title: 'C# Tasks',
-    description: 'Backend Development • 2021',
-    tags: ['C#', '.NET'],
-    codeLink: 'https://github.com/nikseell/c-sharp',
-    year: '2021',
-  },
-  {
-    title: 'C# Tests',
-    description: 'Testing • 2021',
-    tags: ['C#', '.NET'],
-    codeLink: 'https://github.com/nikseell/c-sharp-tests',
-    year: '2021',
-  },
-  {
-    title: 'Quiz Game',
-    description: 'Game Development • 2020',
-    tags: ['Unity', 'C#'],
-    link: 'https://balvurcb.lv/spele/',
-    imageUrl: unityQuizGameImage,
-    year: '2020',
   },
 ]
