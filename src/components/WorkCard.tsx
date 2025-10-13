@@ -7,8 +7,8 @@ import defaultImage from '../assets/projects/default.png'
 
 const WorkCard: FC<WorkCardProps> = ({ title, tags, link, codeLink, imageUrl, year }) => {
   return (
-    <div className="flex flex-col overflow-hidden aspect-[4/3] sm:aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] h-full">
-      <div className="flex w-full h-full bg-[#191919] rounded-2xl p-4 sm:p-8 overflow-hidden">
+    <div className="flex flex-col h-full">
+      <div className="flex-1 min-h-0 bg-[#191919] rounded-2xl p-4 lg:p-8 overflow-hidden">
         {imageUrl ? (
           <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-xl hover:scale-105 transition-all duration-300">
             <img
@@ -28,16 +28,16 @@ const WorkCard: FC<WorkCardProps> = ({ title, tags, link, codeLink, imageUrl, ye
         )}
       </div>
 
-      <div className="flex justify-between items-center mt-4">
-        <div className="flex flex-col">
-          <p className="text-2xl font-semibold opacity-90">{title}</p>
-          <div className="flex items-center gap-2">
-            <p className="opacity-60 text-sm">{tags.join(', ')}</p>
-            <p className="bg-white/60 h-1.5 w-1.5 rounded-full text-sm"></p>
-            <p className="text-[#8B5CF6] text-sm">{year}</p>
+      <div className="flex justify-between items-start mt-4 h-16">
+        <div className="flex flex-col flex-1 min-w-0 pr-2">
+          <p className="text-2xl font-semibold opacity-90 line-clamp-1 leading-tight">{title}</p>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="opacity-60 text-sm line-clamp-1">{tags.join(', ')}</p>
+            <p className="bg-white/60 h-1.5 w-1.5 rounded-full text-sm flex-shrink-0"></p>
+            <p className="text-[#8B5CF6] text-sm flex-shrink-0">{year}</p>
           </div>
         </div>
-        <div className="flex justify-end space-x-2 items-center">
+        <div className="flex justify-end space-x-2 items-center flex-shrink-0">
           {link && (
             <IconButton
               href={link}
