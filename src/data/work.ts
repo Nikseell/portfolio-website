@@ -18,7 +18,7 @@ export const workData: Work[] = [
     title: 'Minimal Portfolio Template',
     description: 'Ready-to-use minimal portfolio template - just add your content and deploy',
     tags: ['React', 'TypeScript'],
-    codeLink: 'https://github.com/nikseell/portfolio-website',
+    codeLink: 'https://github.com/nikseell/minimal-portfolio-template',
     imageUrl: minimalPortfolioImage,
     year: '2025',
   },
