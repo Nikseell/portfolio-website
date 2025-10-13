@@ -3,7 +3,6 @@ import Skills from './Skills'
 import { CodeEditor } from '@/components/animate-ui/components/code-editor'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionPanel } from '@/components/animate-ui/base/accordion'
 import IconButton from '@/components/common/IconButton'
-import mailIcon from '../../assets/icons/mail.svg'
 
 const Hero: FC = () => {
   return (
